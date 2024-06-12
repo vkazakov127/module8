@@ -2,7 +2,17 @@ def add_everything_up(a,b):
     try:
         c = a + b
     except TypeError as exc:
+        Descr = ''
+        for arg in exc.args:
+            Descr += arg
+        print('-----------------------------------------------')
+        print(f'Исключение : {exc}. \nПодробности: {Descr}')
+        print(f'Операция в виде слияния строк:')
         c = str(a) + str(b)
+    else:
+        print('-----------------------------------------------')
+        print('Операция успешна:')
+        return c
     finally:
         return c
 
