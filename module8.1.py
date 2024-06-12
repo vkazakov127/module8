@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def add_everything_up(a,b):
     try:
         c = a + b
